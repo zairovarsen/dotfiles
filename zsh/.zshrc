@@ -55,14 +55,15 @@ export FZF_CTRL_T_OPTS="--height 60% \
 ################# ALIASES #########################
 
 alias la=tree
-alias cat=bat
 
 # Dirs
 alias ..="cd .."
 alias ...="cd ../.."
 
 # GO
-export GOPATH='/Users/arsenzairov/go'
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 # Vim
 alias vim="/opt/homebrew/bin/vim"
