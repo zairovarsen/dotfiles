@@ -7,6 +7,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Homebrew path
 export PATH=/opt/homebrew/bin:$PATH
 
+# Postgres 
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -79,4 +82,14 @@ alias dt="cd ~/Desktop"
 # Procrastination
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
+# pnpm
+export PNPM_HOME="/Users/arsenzairov/.pnpm-global"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
